@@ -1,3 +1,4 @@
+import time
 def fib(n):
   fibtable={}
   fibtable[0]=0
@@ -6,7 +7,8 @@ def fib(n):
     fibtable[i]=fibtable[i-1]+fibtable[i-2]
   #print(fibtable)
   return fibtable
-
-ans=fib(10)
-for i in ans.values():
-  print(i)
+a = time.time()
+ans=fib(100000)
+#for i in ans.values():
+#  print(i)
+print(time.time()-a)
