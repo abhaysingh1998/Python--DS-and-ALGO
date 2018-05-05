@@ -1,5 +1,7 @@
 import time
-def fib(n):
+
+#Iterative approach using tables
+def fib_I(n):
   fibtable={}
   fibtable[0]=0
   fibtable[1]=1
@@ -7,8 +9,10 @@ def fib(n):
     fibtable[i]=fibtable[i-1]+fibtable[i-2]
   #print(fibtable)
   return fibtable
+
 a = time.time()
-ans=fib(100000)
-#for i in ans.values():
-#  print(i)
-print(time.time()-a)
+
+ans=fib_I(100000)
+print(ans[100000])
+
+print("Time Taken: ",time.time()-a)
